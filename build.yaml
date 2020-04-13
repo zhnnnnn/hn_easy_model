@@ -1,0 +1,11 @@
+builders:
+  hn_easy_model:
+    target: ":hn_easy_model"
+    import: "package:hn_easy_model/hn_easy_model_builder.dart"
+    builder_factories: ["hnEasyModelBuilder"]
+    build_extensions: {".dart": [".hneasymodel.dart"]}
+    auto_apply: root_package
+    build_to: source
+    defaults:
+      generate_for:
+        - test/easy_model_headers.dart
