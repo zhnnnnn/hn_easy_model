@@ -40,6 +40,7 @@ class HNModelType {
   static String int = 'int';
   static String double = 'double';
   static String _var = 'dynamic';
+  static String dynamic = 'dynamic';
 }
 
 class _initManager {
@@ -64,7 +65,8 @@ class _initManager {
             var safeValue = _instanceDataManager._safeValue(typeStr, jsonObj[name]);
             _instanceReflectable._invokeSetter(instance, name, safeValue);
           }
-          else if (typeStr == HNModelType._var) {
+          else if (typeStr == HNModelType._var ||
+                   typeStr == HNModelType.dynamic) {
             _instanceReflectable._invokeSetter(instance, name, jsonObj[name]);
           }
           else if (typeStr == HNModelType.list) {
@@ -134,7 +136,8 @@ class _initManager {
                 if (_instanceDataManager._isBasicType(insideTypeStr)) {
                   objs.add(sobj);
                 }
-                else if (typeStr == HNModelType._var) {
+                else if (typeStr == HNModelType._var ||
+                         typeStr == HNModelType.dynamic) {
                   // do nothing
                 }
                 else {
@@ -146,7 +149,12 @@ class _initManager {
           }
         }
         else {
-          res[name] = _json(value);
+          if (_instanceDataManager._isBasicTypeValue(value)) {// var dynamic
+            res[name] = value;
+          }
+          else {
+            res[name] = _json(value);
+          }
         }
       }
       return res;
@@ -266,6 +274,19 @@ class _instanceDataManager {
     }
 
     return null;
+  }
+
+  static bool _isBasicTypeValue(dynamic value) {
+    if (value is int ||
+        value is double ||
+        value is String ||
+        value is bool ||
+        value is Map) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
   static bool _isBasicType(String typeStr) {

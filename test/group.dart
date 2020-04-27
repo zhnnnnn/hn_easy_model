@@ -3,5 +3,5 @@ import 'student.dart';
 
 @hn_easy_model
 class Group extends HNEasyModel {
-  List <Person> students;
+  List <Student> students;
 }
