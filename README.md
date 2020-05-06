@@ -32,7 +32,7 @@ targets:
 #### 0x13
 Switch to the command line run `flutter packages pub run build_runner build`. It will create a file named `easy_model_headers.hneasymodel.dart`.
 #### 0x14
-At the beginning of the program import previous file (`import 'easy_model_headers.hneasymodel.dart';`) . Execute code `initializeEasyModel();`
+At the beginning of the program import previous file `import 'easy_model_headers.hneasymodel.dart';`. Execute code `initializeEasyModel();`
 
 ### Use model
 #### 0x21
