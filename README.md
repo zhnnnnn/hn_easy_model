@@ -51,13 +51,13 @@ class Person extends HNEasyModel {
 }
 ```
 #### 0x22 json to model
-use `hn_easyInitFromJson`. example `model().hn_easyInitFromJson(map);`
+Use `hn_easyInitFromJson` method, example `model().hn_easyInitFromJson(map);`
 
 #### 0x23 model to json
-`model.hn_easyToJson();`
+Use `hn_easyToJson` method, example `model.hn_easyToJson();`
 
 #### 0x24
-while model change you need run `flutter packages pub run build_runner build`. If there is an error you can run ` flutter packages pub run build_runner build --delete-conflicting-outputs` or just delete `easy_model_headers.hneasymodel.dart` file.
+While model change you need run `flutter packages pub run build_runner build`. If there is an error you can run ` flutter packages pub run build_runner build --delete-conflicting-outputs` or just delete `easy_model_headers.hneasymodel.dart` file.
 
 ## Supported
 * [x] int
