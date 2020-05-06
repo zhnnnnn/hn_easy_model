@@ -1,5 +1,7 @@
 # hn_easy_model
 
+[中文🇨🇳](https://github.com/zhnnnnn/hn_easy_model/blob/master/README_CN.md)
+
 A more easy way to do Flutter JSON serialization and deserialization.
 
 ## Installation
