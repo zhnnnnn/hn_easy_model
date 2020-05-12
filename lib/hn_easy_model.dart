@@ -13,6 +13,9 @@ class HNEasyModel {
     return _initManager._obj(this.runtimeType.toString(), jsonObj);
   }
 
+  /// obj property set finish. If you want do something at this time override this method.
+  void hn_easyPropertySetFinish(Map jsonObj) {}
+
   /// Model To Json
   ///
   /// model must callout with @hn_easy_model
@@ -97,6 +100,10 @@ class _initManager {
             }
           }
         }
+
+        var propertySetFinish = (dynamic instance, dynamic json) => instance.hn_easyPropertySetFinish(json);
+        propertySetFinish(instance,jsonObj);
+
         return instance;
       }
       return null;
