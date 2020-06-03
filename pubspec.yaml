@@ -1,8 +1,8 @@
 name: hn_easy_model
 description: A new Flutter package.
 version: 0.0.1
-author:
-homepage:
+author: coderZhangHuiNan@163.com
+homepage: https://github.com/zhnnnnn/hn_easy_model
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -10,8 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  build_runner: any
-  build: any
+  build_runner: ^1.10.0
+  build: ^1.3.0
+  analyzer: ^0.39.8
 
 dev_dependencies:
   flutter_test:
