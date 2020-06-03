@@ -10,7 +10,8 @@ Add a dependency on hn_easy_model in your pubspec.
 
 ```
 dependencies:
-    hn_easy_model:
+    hn_easy_model: any
+    build_runner: any
 ```
 
 ## Usage

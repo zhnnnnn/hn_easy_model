@@ -8,7 +8,8 @@
 
 ```
 dependencies:
-    hn_easy_model:
+    hn_easy_model: any
+    build_runner: any
 ```
 
 ## 使用
